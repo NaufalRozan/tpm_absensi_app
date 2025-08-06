@@ -7,6 +7,7 @@ import 'package:tpm_absensi_app/presentation/home/history/history_page.dart';
 import 'package:tpm_absensi_app/services/location_service.dart';
 import 'package:tpm_absensi_app/services/permission_service.dart';
 import 'package:tpm_absensi_app/services/storage_service.dart';
+import 'package:tpm_absensi_app/widgets/app_snackbar.dart';
 
 class AttendancePage extends StatefulWidget {
   final String userName;
@@ -90,8 +91,10 @@ class _AttendancePageState extends State<AttendancePage> {
       _photoPath = null;
     });
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Absensi berhasil')),
+    AppSnackBar.show(
+      context,
+      message: 'Absensi berhasil',
+      type: AppSnackBarType.success,
     );
   }
 

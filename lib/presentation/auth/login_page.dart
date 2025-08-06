@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tpm_absensi_app/presentation/home/attendance_page.dart';
+import 'package:tpm_absensi_app/widgets/app_snackbar.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -29,8 +30,10 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Email atau password salah')),
+      AppSnackBar.show(
+        context,
+        message: 'Email atau password salah',
+        type: AppSnackBarType.error,
       );
     }
   }
