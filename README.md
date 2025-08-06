@@ -9,11 +9,6 @@ Aplikasi Flutter sederhana untuk absensi kehadiran berbasis lokasi & selfie.
 1. [Fitur](#fitur)  
 2. [Teknologi & Plugin](#teknologi--plugin)  
 3. [Persiapan](#persiapan)  
-4. [Konfigurasi Google Maps](#konfigurasi-google-maps)  
-5. [Generate Code & Build](#generate-code--build)  
-6. [Menjalankan Aplikasi](#menjalankan-aplikasi)  
-7. [Struktur Proyek](#struktur-proyek)  
-8. [Catatan Khusus](#catatan-khusus)  
 
 ---
 
@@ -64,7 +59,11 @@ Dev-dependencies:
 
 ## Persiapan
 
-1. **Clone repo** atau ekstrak file ZIP:
-   ```bash
-   git clone https://github.com/NaufalRozan/absensi_app.git
-   cd absensi_app
+1.  **Clone repository**
+    ```bash
+    git clone https://github.com/NaufalRozan/tpm_absensi_app.git
+    cd absensi_app
+2.  **Instalasi dependencies**
+    ```bash
+    flutter pub get
+
