@@ -30,7 +30,6 @@ class _AttendancePageState extends State<AttendancePage> {
     _loadTodayStatus();
     _checkLocation();
 
-    // Mulai timer yang update _now tiap detik
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       setState(() {
         _now = DateTime.now();
@@ -40,7 +39,6 @@ class _AttendancePageState extends State<AttendancePage> {
 
   @override
   void dispose() {
-    // Batalkan timer saat widget di-destroy
     _timer?.cancel();
     super.dispose();
   }
@@ -112,7 +110,7 @@ class _AttendancePageState extends State<AttendancePage> {
       ),
       body: Container(
         width: double.infinity,
-        height: double.infinity, // <-- pastikan penuh layar
+        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFF56CCF2), Color(0xFF2F80ED)],
@@ -212,7 +210,6 @@ class _AttendancePageState extends State<AttendancePage> {
                     ),
                     const SizedBox(height: 12),
 
-                    // Lokasi (Container menggantikan Chip di Wrap)
                     if (_latitude != null && _longitude != null) ...[
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
