@@ -44,7 +44,7 @@ Aplikasi Flutter sederhana untuk absensi kehadiran berbasis lokasi & selfie.
 
 ## Teknologi & Plugin
 
-- **Flutter SDK** (3.x)  
+- **Flutter SDK** (3.24.4)  
 - **geolocator**: akses GPS & hitung jarak (Haversine)  
 - **image_picker**: ambil foto selfie  
 - **permission_handler**: izin lokasi & kamera  
