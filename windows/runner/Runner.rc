@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "tmp_absensi_app" "\0"
+            VALUE "FileDescription", "tpm_absensi_app" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "tmp_absensi_app" "\0"
+            VALUE "InternalName", "tpm_absensi_app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "tmp_absensi_app.exe" "\0"
-            VALUE "ProductName", "tmp_absensi_app" "\0"
+            VALUE "OriginalFilename", "tpm_absensi_app.exe" "\0"
+            VALUE "ProductName", "tpm_absensi_app" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

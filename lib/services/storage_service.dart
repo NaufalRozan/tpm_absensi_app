@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:tmp_absensi_app/models/attendance.dart';
+import 'package:tpm_absensi_app/models/attendance.dart';
 
 class StorageService {
   static const boxName = 'attendanceBox';

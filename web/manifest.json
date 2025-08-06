@@ -1,6 +1,6 @@
 {
-    "name": "tmp_absensi_app",
-    "short_name": "tmp_absensi_app",
+    "name": "tpm_absensi_app",
+    "short_name": "tpm_absensi_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

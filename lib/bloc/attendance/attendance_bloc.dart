@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:tmp_absensi_app/services/location_service.dart';
-import 'package:tmp_absensi_app/services/permission_service.dart';
-import 'package:tmp_absensi_app/services/storage_service.dart';
+import 'package:tpm_absensi_app/services/location_service.dart';
+import 'package:tpm_absensi_app/services/permission_service.dart';
+import 'package:tpm_absensi_app/services/storage_service.dart';
 import '../../models/attendance.dart';
 import 'package:image_picker/image_picker.dart';
 

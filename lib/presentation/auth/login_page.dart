@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tmp_absensi_app/presentation/home/attendance_page.dart';
+import 'package:tpm_absensi_app/presentation/home/attendance_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

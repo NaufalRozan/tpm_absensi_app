@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:tmp_absensi_app/models/attendance.dart';
+import 'package:tpm_absensi_app/models/attendance.dart';
 
 class HistoryDetailPage extends StatelessWidget {
   final Attendance attendance;

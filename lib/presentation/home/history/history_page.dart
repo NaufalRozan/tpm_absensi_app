@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:tmp_absensi_app/models/attendance.dart';
-import 'package:tmp_absensi_app/presentation/home/history/history_detail_page.dart';
+import 'package:tpm_absensi_app/models/attendance.dart';
+import 'package:tpm_absensi_app/presentation/home/history/history_detail_page.dart';
 
 import '../../../services/storage_service.dart';
 

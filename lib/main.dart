@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:tmp_absensi_app/bloc/attendance/attendance_bloc.dart';
-import 'package:tmp_absensi_app/models/attendance.dart';
-import 'package:tmp_absensi_app/presentation/auth/login_page.dart';
+import 'package:tpm_absensi_app/bloc/attendance/attendance_bloc.dart';
+import 'package:tpm_absensi_app/models/attendance.dart';
+import 'package:tpm_absensi_app/presentation/auth/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
