@@ -1,8 +1,8 @@
 import 'package:geolocator/geolocator.dart';
 
 class LocationService {
-  static const officeLat = -7.747752030482899;
-  static const officeLng = 110.38015246964542;
+  static const officeLat = -6.200000;
+  static const officeLng = 106.816666;
   static const radius = 100.0;
 
   static Future<Position> getCurrentPosition() async {

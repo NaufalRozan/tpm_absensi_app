@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:tpm_absensi_app/models/attendance.dart';
 import 'package:tpm_absensi_app/presentation/home/history/history_page.dart';
 import 'package:tpm_absensi_app/services/location_service.dart';
@@ -30,11 +31,8 @@ class _AttendancePageState extends State<AttendancePage> {
     super.initState();
     _loadTodayStatus();
     _checkLocation();
-
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      setState(() {
-        _now = DateTime.now();
-      });
+      setState(() => _now = DateTime.now());
     });
   }
 
@@ -168,7 +166,7 @@ class _AttendancePageState extends State<AttendancePage> {
                     ),
                     const Divider(height: 32),
 
-                    // Status Absensi (Container menggantikan Chip)
+                    // Status Absensi
                     Center(
                       child: Container(
                         padding: const EdgeInsets.symmetric(
@@ -213,7 +211,36 @@ class _AttendancePageState extends State<AttendancePage> {
                     ),
                     const SizedBox(height: 12),
 
-                    if (_latitude != null && _longitude != null) ...[
+                    // Lat/Lng: shimmer jika null, atau tampilkan nilai
+                    if (_latitude == null || _longitude == null) ...[
+                      Shimmer.fromColors(
+                        baseColor: Colors.grey.shade300,
+                        highlightColor: Colors.grey.shade100,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Container(
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ] else ...[
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -224,9 +251,7 @@ class _AttendancePageState extends State<AttendancePage> {
                               decoration: BoxDecoration(
                                 color: Colors.grey.shade200,
                                 borderRadius: BorderRadius.circular(8),
-                                border: Border.all(
-                                  color: Colors.grey.shade400,
-                                ),
+                                border: Border.all(color: Colors.grey.shade400),
                               ),
                               child: Center(
                                 child: Text(
@@ -244,9 +269,7 @@ class _AttendancePageState extends State<AttendancePage> {
                               decoration: BoxDecoration(
                                 color: Colors.grey.shade200,
                                 borderRadius: BorderRadius.circular(8),
-                                border: Border.all(
-                                  color: Colors.grey.shade400,
-                                ),
+                                border: Border.all(color: Colors.grey.shade400),
                               ),
                               child: Center(
                                 child: Text(
@@ -260,6 +283,8 @@ class _AttendancePageState extends State<AttendancePage> {
                       ),
                     ],
                     const SizedBox(height: 12),
+
+                    // Status lokasi masih seperti semula
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12, vertical: 6),
@@ -318,6 +343,7 @@ class _AttendancePageState extends State<AttendancePage> {
                             )
                           : null,
                     ),
+
                     const SizedBox(height: 24),
 
                     // Tombol Ambil Selfie & Absen
@@ -358,6 +384,7 @@ class _AttendancePageState extends State<AttendancePage> {
                         ),
                       ],
                     ),
+
                     const SizedBox(height: 16),
 
                     // Lihat Riwayat
